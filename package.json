@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "autoprefixer": "^7.0.1",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11",
+    "normalize.css": "^7.0.0",
+    "postcss-import": "^9.1.0",
+    "postcss-mixins": "^6.0.0",
+    "postcss-nested": "^2.0.2",
+    "postcss-simple-vars": "^4.0.0"
+  },
+  "name": "symmetrical-spork",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjeuk/symmetrical-spork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjeuk/symmetrical-spork/issues"
+  },
+  "homepage": "https://github.com/mjeuk/symmetrical-spork#readme",
+  "description": ""
+}
