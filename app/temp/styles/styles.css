@@ -1278,13 +1278,17 @@ Instead edit gulp/templates/sprite.css */
 	}
 	}
 
-.primary-nav a {
+.primary-nav__link {
 		color: #FFF;
 		text-decoration: none;
 		font-weight: 300;
 		display: block;
 		padding: 12px 0;
 	}
+
+.primary-nav__link--active {
+			color: #D59541;
+		}
 
 .reveal-item {
 	opacity: 0;
