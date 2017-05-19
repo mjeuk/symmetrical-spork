@@ -6,6 +6,16 @@
 
 	@mixin atMedium {
 		background-color: rgba($mainBlue, .3);
+		position: fixed;
+		border-bottom: 1px solid transparent;
+		box-shadow: none;
+		transition: all 1.2s ease-out;
+
+		&--dark {
+			border-color: #FFF;
+			box-shadow: 1px 0 42px rgba($mainBlue, .5);
+			background-color: rgba($mainBlue, 1);
+		}
 	}
 
 	&__btn-container {
@@ -78,9 +88,5 @@
 				background-color: transparent;
 			}
 		}
-	}
-
-	@mixin atMedium {
-		background-color: rgba($mainBlue, .3);
 	}
 }
