@@ -1112,7 +1112,7 @@ Instead edit gulp/templates/sprite.css */
 .site-header {
 		background-color: rgba(47,85,114, .3);
 		position: fixed;
-		border-bottom: 1px solid transparent;
+		border-color: #FFF;
 		-webkit-box-shadow: none;
 		        box-shadow: none;
 		-webkit-transition: all 1.2s ease-out;
@@ -1120,7 +1120,7 @@ Instead edit gulp/templates/sprite.css */
 }
 
 		.site-header--dark {
-			border-color: #FFF;
+			border-bottom: 1px solid #FFF;
 			-webkit-box-shadow: 1px 0 42px rgba(47,85,114, .5);
 			        box-shadow: 1px 0 42px rgba(47,85,114, .5);
 			background-color: rgba(47,85,114, 1);
@@ -1149,6 +1149,10 @@ Instead edit gulp/templates/sprite.css */
 		background-color: #2F5572;
 		padding: 25px 36px;
 		left: 50%;
+		-webkit-transition: -webkit-transform .42s ease-in-out;
+		transition: -webkit-transform .42s ease-in-out;
+		transition: transform .42s ease-in-out;
+		transition: transform .42s ease-in-out, -webkit-transform .42s ease-in-out;
 		-webkit-transform: translateX(-50%) scale(.8);
 		        transform: translateX(-50%) scale(.8);
 		-webkit-transform-origin: 50% 0;
@@ -1163,6 +1167,11 @@ Instead edit gulp/templates/sprite.css */
 			-webkit-transform: translateX(0);
 			        transform: translateX(0)
 	}
+
+			.site-header--dark .site-header__logo {
+				-webkit-transform: scale(.57);
+				        transform: scale(.57);
+			}
 	}
 
 .site-header__logo__graphic {
