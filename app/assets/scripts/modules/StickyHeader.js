@@ -13,14 +13,8 @@ class StickyHeader {
     {
         new Waypoint({
             element: this.headerTrigger[0],
-            handler: (newDirection) => {
-                let direction;
-
-                if (direction !== newDirection)
-                {
-                    this.siteHeader.toggleClass('site-header--dark');
-                    direction = newDirection;
-                }
+            handler: (direction) => {
+                this.siteHeader.toggleClass('site-header--dark', direction === 'down');
             }
         })
     }

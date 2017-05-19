@@ -11241,13 +11241,8 @@ var StickyHeader = function () {
 
             new Waypoint({
                 element: this.headerTrigger[0],
-                handler: function handler(newDirection) {
-                    var direction = void 0;
-
-                    if (direction !== newDirection) {
-                        _this.siteHeader.toggleClass('site-header--dark');
-                        direction = newDirection;
-                    }
+                handler: function handler(direction) {
+                    _this.siteHeader.toggleClass('site-header--dark', direction === 'down');
                 }
             });
         }
