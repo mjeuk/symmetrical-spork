@@ -19,6 +19,7 @@
     "postcss-mixins": "^6.0.0",
     "postcss-nested": "^2.0.2",
     "postcss-simple-vars": "^4.0.0",
+    "waypoints": "^4.0.1",
     "webpack": "^2.5.1"
   },
   "name": "symmetrical-spork",
