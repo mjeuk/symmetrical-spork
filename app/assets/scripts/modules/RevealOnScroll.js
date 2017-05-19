@@ -5,8 +5,9 @@ class RevealOnScroll {
     constructor(selector, offset)
     {
         this.itemsToReveal = $(selector);
+        this.offset = offset;
         this.hideInitially();
-        this.createWaypoints(offset);
+        this.createWaypoints();
     }
 
     hideInitially()
@@ -14,18 +15,19 @@ class RevealOnScroll {
         this.itemsToReveal.addClass('reveal-item');
     }
 
-    createWaypoints(offset)
+    createWaypoints()
     {
-        $.map(this.itemsToReveal, function(element)
+        $.map(this.itemsToReveal, (element) =>
         {
             function showElement()
             {
                 $(element).addClass('reveal-item--is-visible');
             }
+
             new Waypoint({
                 element: element,
                 handler: showElement,
-                offset: offset
+                offset: this.offset
             })
         })
     }

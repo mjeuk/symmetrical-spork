@@ -10403,8 +10403,9 @@ var RevealOnScroll = function () {
         _classCallCheck(this, RevealOnScroll);
 
         this.itemsToReveal = (0, _jquery2.default)(selector);
+        this.offset = offset;
         this.hideInitially();
-        this.createWaypoints(offset);
+        this.createWaypoints();
     }
 
     _createClass(RevealOnScroll, [{
@@ -10414,15 +10415,18 @@ var RevealOnScroll = function () {
         }
     }, {
         key: 'createWaypoints',
-        value: function createWaypoints(offset) {
+        value: function createWaypoints() {
+            var _this = this;
+
             _jquery2.default.map(this.itemsToReveal, function (element) {
                 function showElement() {
                     (0, _jquery2.default)(element).addClass('reveal-item--is-visible');
                 }
+
                 new Waypoint({
                     element: element,
                     handler: showElement,
-                    offset: offset
+                    offset: _this.offset
                 });
             });
         }
