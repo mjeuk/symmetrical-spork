@@ -29,11 +29,15 @@
 		}
 	}
 
-	a {
+	&__link {
 		color: #FFF;
 		text-decoration: none;
 		font-weight: 300;
 		display: block;
 		padding: 12px 0;
+
+		&--active {
+			color: $mainOrange;
+		}
 	}
 }
