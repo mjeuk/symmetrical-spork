@@ -9,9 +9,9 @@ class StickyHeader {
         this.headerTrigger = $('.large-hero__title');
         this.pageSections = $('.page-section');
         this.links = $('.primary-nav__link');
+
         this.createHeaderWaypoint();
         this.createSectionWaypoints();
-
         this.links.smoothScroll();
     }
 
@@ -27,19 +27,30 @@ class StickyHeader {
 
     createSectionWaypoints()
     {
+        let links = this.links;
+
         $.map(this.pageSections, (element) =>
         {
-            new Waypoint({
+            return new Waypoint({
                 element: element,
-                handler: (direction) =>
+                handler: function()
                 {
                     let active = document.getElementById(`${element.id}-link`);
 
-                    this.links.removeClass('primary-nav__link--active');
+                    links.removeClass('primary-nav__link--active');
                     $(active).addClass('primary-nav__link--active');
 
+                },
+                offset: (bla) =>
+                {
+                    console.log(this);
                 }
             })
+        })
+
+        $(links).on('click', (evt) =>
+        {
+            let section = evt.target.id.replace('-link', '');
         })
     }
 }
