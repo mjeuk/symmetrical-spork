@@ -11237,9 +11237,9 @@ var StickyHeader = function () {
         this.headerTrigger = (0, _jquery2.default)('.large-hero__title');
         this.pageSections = (0, _jquery2.default)('.page-section');
         this.links = (0, _jquery2.default)('.primary-nav__link');
+
         this.createHeaderWaypoint();
         this.createSectionWaypoints();
-
         this.links.smoothScroll();
     }
 
@@ -11260,16 +11260,25 @@ var StickyHeader = function () {
         value: function createSectionWaypoints() {
             var _this2 = this;
 
+            var links = this.links;
+
             _jquery2.default.map(this.pageSections, function (element) {
-                new Waypoint({
+                return new Waypoint({
                     element: element,
-                    handler: function handler(direction) {
+                    handler: function handler() {
                         var active = document.getElementById(element.id + '-link');
 
-                        _this2.links.removeClass('primary-nav__link--active');
+                        links.removeClass('primary-nav__link--active');
                         (0, _jquery2.default)(active).addClass('primary-nav__link--active');
+                    },
+                    offset: function offset(bla) {
+                        console.log(_this2);
                     }
                 });
+            });
+
+            (0, _jquery2.default)(links).on('click', function (evt) {
+                var section = evt.target.id.replace('-link', '');
             });
         }
     }]);
