@@ -40,10 +40,6 @@ class StickyHeader {
                     links.removeClass('primary-nav__link--active');
                     $(active).addClass('primary-nav__link--active');
 
-                },
-                offset: (bla) =>
-                {
-                    console.log(this);
                 }
             })
         })
